@@ -27,7 +27,6 @@ class Model():
     def getHerosPageList(self, curPage:int, pageSize:int):
         sql = f'select * from heros limit {(curPage-1)*pageSize}, {pageSize}'
         res = pd.read_sql_query(sql, self.db)
-        # records是关键字，可以点进函数里查看注释
         res = res.to_dict('records')
         return res
 
