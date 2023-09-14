@@ -15,13 +15,14 @@ export default defineConfig({
   },
     // 反向代理设置
     server: {
+        host: '0.0.0.0',
+        port: 3200,
+        open: true,
         proxy: {
             '/api': { 
-                target: 'https://127.0.0.1:8085', // 目标地址 --> 服务器地址
-                changeOrigin: true, // 允许跨域
-                ws: true,  // 允许websocket代理
-                // 重写路径 --> 作用与vue配置pathRewrite作用相同
-                rewrite: (path) => path.replace(/^\/api/, "")
+                target: 'http://127.0.0.1:8000', 
+                changeOrigin: true, 
+                rewrite: path => path.replace(/^\/api/, '')
             }
         },
     },
