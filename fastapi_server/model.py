@@ -6,7 +6,7 @@ dbConn = {
     'host': 'localhost',
     'user': 'root',
     'password': 'yy6689990',
-    'db': 'victor',
+    'db': 'heros',
     'port': 3306
 }
 

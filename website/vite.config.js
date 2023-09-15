@@ -13,7 +13,7 @@ export default defineConfig({
         '@': fileURLToPath(new URL('./src', import.meta.url))
         }
   },
-    // 反向代理设置
+    // 代理服务器设置
     server: {
         host: '0.0.0.0',
         port: 3200,
